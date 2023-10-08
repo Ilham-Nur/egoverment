@@ -32,7 +32,7 @@
 </head>
 <body>
     <!-- Navbar dengan navbar-fixed-top untuk mengikuti scroll -->
-    <nav class="navbar navbar-expand-lg py-5 fixed-top"  id="navbar">
+    <nav class="navbar navbar-expand-lg py-5 fixed-top ">
         <div class="container">
             <a class="navbar-brand" href="#">E-Donor Darah</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,41 +61,42 @@
     
 
    <!-- Jumbotron dengan gambar slider -->
-<div class="jumbotron text-center" style="height: 600px; overflow: hidden;">
-    <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicators (titik navigasi) -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#imageSlider" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#imageSlider" data-bs-slide-to="1"></li>
-            <li data-bs-target="#imageSlider" data-bs-slide-to="2"></li>
-        </ol>
-        
-        <!-- Gambar slider -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('img/gambar4.png') }}" class="d-block w-100" alt="Gambar 1">
+{{-- <div class="container-fluid"> --}}
+    <div class="jumbotron text-center" style="height: 600px; overflow: hidden;">
+        <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators (titik navigasi) -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#imageSlider" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#imageSlider" data-bs-slide-to="1"></li>
+                <li data-bs-target="#imageSlider" data-bs-slide-to="2"></li>
+            </ol>
+            
+            <!-- Gambar slider -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('img/gambar4.png') }}" class="d-block w-100" alt="Gambar 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('img/gambar2.png') }}" class="d-block w-100" alt="Gambar 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('img/gambar3.png') }}" class="d-block w-100" alt="Gambar 3">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/gambar2.png') }}" class="d-block w-100" alt="Gambar 2">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('img/gambar3.png') }}" class="d-block w-100" alt="Gambar 3">
-            </div>
-        </div>
 
-        <!-- Tombol navigasi slider -->
-        <a class="carousel-control-prev" href="#imageSlider" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#imageSlider" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </a>
-    </div>
-    
-    <h1>Selamat datang di E-Donor Darah</h1>
-    <p>Aplikasi yang memudahkan Anda dalam mencari dan memberikan donor darah.</p>
+            <!-- Tombol navigasi slider -->
+            <a class="carousel-control-prev" href="#imageSlider" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imageSlider" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>  
+        <h1>Selamat datang di E-Donor Darah</h1>
+        <p>Aplikasi yang memudahkan Anda dalam mencari dan memberikan donor darah.</p>
 </div>
 
 
@@ -108,15 +109,5 @@
     <!-- Tambahkan link ke Bootstrap JavaScript (Popper.js dan Bootstrap.js) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    <script>
-        window.addEventListener('scroll', function () {
-            var navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) { // Atur tinggi yang sesuai dengan kapan navbar harus menjadi fixed
-                navbar.classList.add('fixed-top');
-            } else {
-                navbar.classList.remove('fixed-top');
-            }
-        });
-    </script>
 </body>
 </html>
